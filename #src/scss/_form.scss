@@ -1,0 +1,77 @@
+.form {
+}
+.form__container {
+  max-width: 1088px;
+  width: 100%;
+  text-align: center;
+  padding: 72px 0;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+.form__title, .form__title>span {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  color: $blue;
+  margin-bottom: 48px;
+}
+.form__title>span {
+  color: $dark-gray;
+}
+.form__inner {
+  display: flex;
+  max-width: 640px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.form-item {
+  position: relative;
+  margin-bottom: 15px
+}
+.form-item input{
+  display: inline-block;
+  width: 312px;
+  height: 48px;
+  background: #EEF3FC;
+  transition: all .3s ease;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+}
+.form-item label{
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 13px;
+  left: 10px;
+  background: transparent;
+  padding: 0 10px;
+  color: $light-gray;
+  transition: all .3s ease
+}
+.form-item input:focus,
+.form-item input:valid {
+  background-color: #FFFFFF;  
+  border: 1px solid $light-gray;
+
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label {
+  font-size: 11px;
+  top: -10px;
+  background-color: #FFFFFF;
+}
+.form__btn {
+  background-color: $dark-gray;
+  color: #FFFFFF;
+  &:active{
+    color: $light-gray;
+  }
+}

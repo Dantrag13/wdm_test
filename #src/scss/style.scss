@@ -10,31 +10,37 @@
     }
     
 @import "fonts";
+@import "variables";
+@import "advertisement";
+@import "form";
 
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
-
-
+a {
+    text-decoration: none;
+}
+ul, li, ol {
+    list-style: none;
+}
 
 body {
     background-image: linear-gradient(#FFFFFF, #E6EDFA);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
     height: 100vh;
 }
 
 
+@import "header";
 
-.header{
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    margin: 0 auto;
-    max-height: 100vh;
-}
 
 .imagefon{
     position: absolute;
@@ -47,12 +53,6 @@ body {
 
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: green;
-}
 
 
 span {
