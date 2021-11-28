@@ -1,71 +1,11 @@
 
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face { 
-        font-family: $font_name; 
-        font-display: swap; 
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2"); 
-        font-weight: #{$weight}; 
-        font-style: #{$style}; }
-    
-    }
-    
+@import "mixins";  
 @import "fonts";
 @import "variables";
-@import "advertisement";
-@import "form";
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-}
-ul, li, ol {
-    list-style: none;
-}
-
-body {
-    background-image: linear-gradient(#FFFFFF, #E6EDFA);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    height: 100vh;
-}
-
+@import "normalize";
 
 @import "header";
-
-
-.imagefon{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    max-width: 1200px;
-    z-index: -1;
-
-}
-
-
-
-span {
-    font-size: 20px;
-    @media (max-width: 760px) {
-    font-size: 30px;
-    }
-}
-
-
-p {
-    color: rebeccapurple;
-    @media (max-width: 760px) {
-        color: gray;
-    }
-}
+@import "advertisement";
+@import "form";
+@import "footer";

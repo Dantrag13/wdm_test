@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, li, ol {
+    list-style: none;
+}
+
+body {
+    background-image: linear-gradient(#FFFFFF, #E6EDFA);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.714em;
+    overflow-x: hidden;
+}
+body._lock {
+    overflow: hidden;
+}

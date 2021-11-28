@@ -9,7 +9,7 @@
     left: 0;
     top: 200px;
     background-image: linear-gradient(264.93deg, #072E44 9.13%, #018FDE 106.76%);
-    opacity: 0.7;
+    opacity: 0.14;
     filter: blur(250px);
     transform: rotate(-150deg);
     z-index: -5;
@@ -22,7 +22,7 @@
     right: 0;
     top: 0;
     background-image: linear-gradient(267.33deg, #018FDE 19.54%, #072E44 123.71%);
-    opacity: 0.7;
+    opacity: 0.14;
     filter: blur(250px);
     transform: rotate(-52deg);
     z-index: -5;
@@ -55,10 +55,10 @@
 .advertisement__title {
   font-weight: 800;
   font-size: 56px;
-  line-height: 80px;
+  line-height: 1.42em;
   letter-spacing: 0.01em;
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 44px;
 }
 .advertisement__offer {
   position: relative;
@@ -66,7 +66,7 @@
   margin: 0 auto;
   font-weight: 800;
   font-size: 28px;
-  line-height: 34px;
+  line-height: 1.214em;
   text-align: center;
   text-transform: uppercase;
   color: $blue;
@@ -101,7 +101,7 @@
   display: inline-block;
   max-width: 164px;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 1.66em;
   text-align: center;
   color: #3D3D3D;
 }
@@ -111,5 +111,95 @@
   color: #FFFFFF;
   &:active{
     color: $light-gray;
+  }
+}
+
+
+
+
+@media (max-width: 1070px) {
+  .advertisement__title{
+    font-size: 48px;
+  }
+  .advertisement__offer{
+    font-size: 24px;
+  }
+
+}
+.advertisement {
+  &::before {
+    width: 472px;
+    height: 558px;
+    top: -310px;
+    transform: rotate(-52.45deg);
+  }
+  &::after {
+    width: 571px;
+    height: 362px;
+    right: 90px;
+    top: 200px;
+    transform: rotate(-150deg);
+  }
+}
+@media (max-width: 990px) {
+  .advertisement__container{
+    max-width: 680px;
+  }
+}
+@media (max-width: 830px) {
+  .advertisement__container{
+    max-width: 580px;
+  }
+}
+@media (max-width: 700px) {
+  .advertisement__container{
+    max-width: 480px;
+  }
+  .advertisement__title{
+    font-size: 32px;
+  }
+  .advertisement__offer{
+    font-size: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .advertisement {
+    &::before {
+      width: 240px;
+      height: 263px;
+      top: -170px;
+      transform: rotate(-52.45deg);
+    }
+    &::after {
+      width: 260px;
+      height: 189px;
+      right: 30px;
+      top: 200px;
+      transform: rotate(-150deg);
+    }
+  }
+  .advertisement__container::before,
+  .advertisement__container::after{
+    display: none;
+  }
+  @media (max-width: 450px) {
+    .advertisement__container {
+      max-width: 350px;
+    }
+  }
+  @media (max-width: 375px) {
+    .advertisement__container {
+      max-width: 300px;
+    }
+    .advertisement__title{
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .advertisement__inner{
+      flex-direction: column;
+    }
+    .inner__text {
+      margin-bottom: 20px;
+    }
   }
 }
